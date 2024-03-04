@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<script>
+  console.log('Top')
+  var head = document.getElementById('head');
+  if (!head) {
+    console.log('No head found');
+  } else {
+    head.innerHTML = 'JS Modified';
+  }
+</script>
+<body>
+<h1 id="head">
+  Hello, World!
+</h1>
+</body>
+<script>
+  console.log('Bottom')
+  var head = document.getElementById('head');
+  if (!head) {
+    console.log('No head found');
+  } else {
+    head.innerHTML = 'JS Modified';
+  }
+</script>
+<!--<script type="module">-->
+<!--  import './app.js'-->
+<!--</script>-->
+</html>
