@@ -1,0 +1,11 @@
+{
+  "name": "module-d",
+  "version": "1.0.0",
+  "private": true,
+  "exports": {
+    "./a": {
+      "types": "./types/a.d.ts",
+      "default": "./dist/a.js"
+    }
+  }
+}

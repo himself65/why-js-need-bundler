@@ -1,0 +1,13 @@
+{
+  "name": "ts",
+  "scripts": {
+    "compile": "tsc -p tsconfig.json"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "module-a": "link:./modules/module-a",
+    "module-d": "link:./modules/module-d"
+  }
+}

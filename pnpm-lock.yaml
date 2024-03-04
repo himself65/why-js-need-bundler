@@ -4,22 +4,53 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
-dependencies:
-  '@slidev/cli':
-    specifier: ^0.48.0-beta.20
-    version: 0.48.0-beta.20(@types/markdown-it@13.0.7)(postcss@8.4.35)
-  '@slidev/theme-default':
-    specifier: latest
-    version: 0.25.0
-  '@slidev/theme-seriph':
-    specifier: latest
-    version: 0.25.0
-  slidev-theme-geist:
-    specifier: ^0.8.1
-    version: 0.8.1
-  vue:
-    specifier: ^3.4.20
-    version: 3.4.21(typescript@5.3.3)
+importers:
+
+  .:
+    dependencies:
+      '@slidev/cli':
+        specifier: ^0.48.0-beta.20
+        version: 0.48.0-beta.20(@types/markdown-it@13.0.7)(postcss@8.4.35)
+      '@slidev/theme-default':
+        specifier: latest
+        version: 0.25.0
+      '@slidev/theme-seriph':
+        specifier: latest
+        version: 0.25.0
+      slidev-theme-geist:
+        specifier: ^0.8.1
+        version: 0.8.1
+      vue:
+        specifier: ^3.4.20
+        version: 3.4.21(typescript@5.3.3)
+
+  packages/node:
+    dependencies:
+      module-a:
+        specifier: link:./modules/module-a
+        version: link:modules/module-a
+      module-b:
+        specifier: link:./modules/module-b
+        version: link:modules/module-b
+      module-c:
+        specifier: link:./modules/module-c
+        version: link:modules/module-c
+      module-d:
+        specifier: link:./modules/module-d
+        version: link:modules/module-d
+
+  packages/ts:
+    dependencies:
+      module-a:
+        specifier: link:./modules/module-a
+        version: link:modules/module-a
+      module-d:
+        specifier: link:./modules/module-d
+        version: link:modules/module-d
+    devDependencies:
+      typescript:
+        specifier: ^5.3.3
+        version: 5.3.3
 
 packages:
 
@@ -4716,7 +4747,6 @@ packages:
     resolution: {integrity: sha512-pXWcraxM0uxAS+tN0AG/BF2TyqmHO014Z070UsJ+pFvYuRSq8KH8DmWpnbXe0pEPDHXZV3FcAbJkijJ5oNEnWw==}
     engines: {node: '>=14.17'}
     hasBin: true
-    dev: false
 
   /uc.micro@2.1.0:
     resolution: {integrity: sha512-ARDJmphmdvUk6Glw7y9DQ2bFkKBHwQHLi2lsaH6PPmz/Ka9sFOBsBluozhDltWmnv9u/cF6Rt87znRTPV+yp/A==}

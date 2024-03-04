@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "rootDir": ".",
+    "strict": true,
+    "typeRoots": [
+      "./node_modules/@types"
+    ],
+    "outDir": "./dist"
+  },
+  "include": [
+    "a.ts",
+    "d.ts"
+  ]
+}
