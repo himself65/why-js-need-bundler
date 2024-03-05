@@ -4,7 +4,7 @@
   "private": true,
   "exports": {
     "./a": {
-      "types": "./types/a.d.ts",
+      "types": "./type/a.d.ts",
       "default": "./dist/a.js"
     }
   }
