@@ -1,9 +1,13 @@
 {
   "name": "node",
   "dependencies": {
+    "llamaindex": "^0.1.19",
     "module-a": "link:./modules/module-a",
     "module-b": "link:./modules/module-b",
     "module-c": "link:./modules/module-c",
     "module-d": "link:./modules/module-d"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.24"
   }
 }
